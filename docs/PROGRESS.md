@@ -29,7 +29,7 @@
 
 ## Slice 1 — Inversion pipeline (Phase 1)
 - [~] T1.1 `corpus/corpus.jsonl` GENERATED (240 rows: 60 plain/pii/credential/structured) via `corpus/build_corpus.py`; validator + `tests/test_corpus.py` green. ← **awaiting your curation pass** (design + convention approved; label+value entities, reserved-range fakes)
-- [ ] T1.2 `inverter.py` + `test_inverter.py` (golden round-trip)
+- [x] T1.2 `leaklens/inversion/inverter.py` (Inverter: lazy load-once, CPU, encode/invert/roundtrip; `get_inverter()` singleton) + `tests/test_inverter.py`. Golden test is HONEST: low-entropy sentence, asserts ≥0.6 of key entities recovered (NOT exact-match), num_steps=5, `@slow` (run `pytest --runslow`). Calibration: 3/3 entities recovered at 5 steps, ~95s load+invert. Slow tests auto-set HF offline (see conftest).
 - [ ] T1.3 `adapters/base.py` + `chroma_adapter.py` + test
 - [ ] T1.4 `metrics.py` + `test_metrics.py` ← **you define + defend the threshold**
 - [ ] T1.5 `scripts/embed_corpus.py` (corpus → Chroma)
@@ -79,4 +79,5 @@
 ## Decisions / learnings log (append as you go)
 - 2025 — Phase 0: smoke test green; metric = key-entity + similarity (not exact-match), evidence: high-entropy secrets mangle while names/structure survive.
 - 2026-07-13 — Slice 0: pip in this venv hits `SSL: CERTIFICATE_VERIFY_FAILED` against PyPI (local trust-store issue). Workaround for future installs: `pip install <pkg> --index-url https://pypi.org/simple --trusted-host pypi.org --trusted-host files.pythonhosted.org`.
+- 2026-07-13 — T1.2: same cert-store issue also breaks `huggingface_hub` metadata calls (it phones home even for cached models). Models ARE cached (vec2text in HF hub cache, gtr-t5-base in torch sentence-transformers cache). Fix: run offline — `HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1`. conftest sets these automatically when `--runslow` is passed (must be set before huggingface_hub import → argv peek at conftest top).
 - _(add new learnings here so they survive context clears)_

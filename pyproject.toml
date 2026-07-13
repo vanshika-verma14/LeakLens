@@ -19,3 +19,4 @@ include = ["leaklens*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = ["slow: needs the ~2GB vec2text model / real inversion (opt in with --runslow)"]
