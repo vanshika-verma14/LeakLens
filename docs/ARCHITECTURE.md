@@ -132,17 +132,29 @@ The **inversion module** internally calls: `adapter.sample(n)` → `inverter.inv
 
 ## Adapter interface
 
+`sample(n)` returns a typed `Sample`, not a bare `(vector, text)` pair: recovery is scored
+**per category**, so every sampled vector must carry back its `type` and `key_entities`.
+
 ```python
 # adapters/base.py
-class VectorStoreAdapter:
-    def sample(self, n: int) -> list[tuple[list[float], str | None]]:
-        """Return up to n (embedding_vector, original_text_or_None) pairs.
-        text is None for real targets (breach scenario); present for our
-        labelled corpus / validation matrix so we can score honestly."""
+@dataclass
+class Sample:
+    id: str
+    vector: list[float]
+    text: str | None = None          # None for a real breach target; present for our corpus
+    type: str | None = None          # plain | pii | credential | structured
+    key_entities: list[str] = field(default_factory=list)
+
+class VectorStoreAdapter(ABC):
+    def add(self, samples: list[Sample]) -> None: ...          # takes precomputed vectors
+    def sample(self, n: int, *, seed: int | None = None) -> list[Sample]: ...  # seed = reproducible
     def count(self) -> int: ...
 ```
 
-Chroma and FAISS each implement this. Adding pgvector/Pinecone later = one new file, nothing else changes.
+Adapters never embed text — they store precomputed vectors (the GTR encoder lives in
+`inversion/inverter.py`). Chroma metadata can't hold a list, so `chroma_adapter` stores
+`key_entities` as a JSON string and parses it back on read. Chroma and FAISS each
+implement this; adding pgvector/Pinecone later = one new file, nothing else changes.
 
 ---
 

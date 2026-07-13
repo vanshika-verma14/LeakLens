@@ -7,9 +7,9 @@ sentence-transformers==2.2.2
 vec2text==0.0.13
 numpy==1.26.4
 
-# Vector stores (installed in later slices)
-chromadb
-faiss-cpu
+# Vector stores
+chromadb==1.5.9
+faiss-cpu  # installed in a later slice
 
 # Config + tooling
 pyyaml==6.0.3

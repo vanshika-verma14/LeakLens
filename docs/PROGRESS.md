@@ -30,7 +30,7 @@
 ## Slice 1 — Inversion pipeline (Phase 1)
 - [~] T1.1 `corpus/corpus.jsonl` GENERATED (240 rows: 60 plain/pii/credential/structured) via `corpus/build_corpus.py`; validator + `tests/test_corpus.py` green. ← **awaiting your curation pass** (design + convention approved; label+value entities, reserved-range fakes)
 - [x] T1.2 `leaklens/inversion/inverter.py` (Inverter: lazy load-once, CPU, encode/invert/roundtrip; `get_inverter()` singleton) + `tests/test_inverter.py`. Golden test is HONEST: low-entropy sentence, asserts ≥0.6 of key entities recovered (NOT exact-match), num_steps=5, `@slow` (run `pytest --runslow`). Calibration: 3/3 entities recovered at 5 steps, ~95s load+invert. Slow tests auto-set HF offline (see conftest).
-- [ ] T1.3 `adapters/base.py` + `chroma_adapter.py` + test
+- [x] T1.3 `adapters/base.py` (Sample dataclass + VectorStoreAdapter ABC: add/sample/count) + `chroma_adapter.py` + `tests/test_chroma_adapter.py` (5 tests). sample() returns Sample{id,vector,text,type,key_entities}; key_entities JSON-serialized in Chroma metadata (Chroma forbids list values). chromadb==1.5.9 installed (pins held). ARCHITECTURE.md adapter snippet updated to Sample shape.
 - [ ] T1.4 `metrics.py` + `test_metrics.py` ← **you define + defend the threshold**
 - [ ] T1.5 `scripts/embed_corpus.py` (corpus → Chroma)
 - [ ] T1.6 `scripts/run_inversion_demo.py` (the spine, end-to-end)
