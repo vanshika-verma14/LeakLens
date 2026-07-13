@@ -39,6 +39,7 @@ The iGPU (2 GB, shared RAM) and the NPU are **not usable for PyTorch** without m
 3. **Encoder-bound.** Works where a public inverter exists (GTR here). Other encoders → the tool honestly reports "invertible in principle, no inverter available."
 4. **Timing not covered.** Explicitly out of scope; listed as future work, not hidden.
 5. **Not a novel attack.** All three attack families are published and cited. The contribution is operationalization + measurement + validation.
+6. **Common-word labels can inflate recall.** Recovery "found" = case-insensitive substring (chosen T1.4: superset of exact, catches `library`→`Library` recapitalization, avoids fuzzy's false positives on wrong values). The trade-off: a single common-word *label* (`Order`/`Invoice`/`Transaction`) can match coincidentally when the generic word appears in recovered text without that specific record being recovered. So label recall overstates leakage — the honest signal is recovery of the high-entropy *value*, which is why labels and values are tagged separately (D5). Guarded by `tests/test_metrics.py`; a future refinement could word-boundary-match short labels.
 
 A tool that *states its own limits* is the strongest signal that the numbers it does report are trustworthy. Lead with this, don't bury it.
 
