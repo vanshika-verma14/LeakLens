@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leaklens"
+version = "0.0.1"
+description = "Defensive CLI that audits RAG infrastructure for embedding-inversion and semantic-cache leakage."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["leaklens*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,16 @@
+# Core — pins are load-bearing (see CLAUDE.md / DECISIONS.md). Do NOT upgrade
+# transformers/accelerate: newer transformers breaks vec2text loading.
+torch==2.13.0
+transformers==4.30.2
+accelerate==0.21.0
+sentence-transformers==2.2.2
+vec2text==0.0.13
+numpy==1.26.4
+
+# Vector stores (installed in later slices)
+chromadb
+faiss-cpu
+
+# Config + tooling
+pyyaml==6.0.3
+pytest

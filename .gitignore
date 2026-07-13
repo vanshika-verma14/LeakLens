@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual env
+.venv/
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+
+# Generated outputs
+results/
+
+# Vector stores / local DBs
+*.sqlite3
+*.sqlite
+chroma/
+*.faiss
+
+# Hugging Face model cache
+hf_cache/
+.cache/
+
+# OS cruft
+.DS_Store
+Thumbs.db
