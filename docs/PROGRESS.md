@@ -5,9 +5,9 @@
 ---
 
 ## Current status
-- **Phase:** Slice 0 complete → starting Slice 1 (inversion pipeline).
-- **Last done:** Slice 0 scaffolding written + verified — `leaklens` imports (v0.0.1), `_compat` resource stub lets `import vec2text` succeed on Windows, `pytest` collects `conftest.py` cleanly (0 tests).
-- **Next action:** Slice 1 task T1.1 — curate `corpus/corpus.jsonl` (~200–300 labelled sentences).
+- **Phase:** Slice 1 in progress — T1.1 corpus generated, awaiting user curation.
+- **Last done:** T1.1 — `corpus/build_corpus.py` generates 240 labelled rows (60 each: plain/pii/credential/structured), verbatim-substring key_entities, reserved-range fakes. Validator + 5-test `tests/test_corpus.py` green (exit 0).
+- **Next action:** user curates `corpus/corpus.jsonl` wording/labels; then T1.2 `inverter.py` (+ golden test).
 
 ---
 
@@ -28,7 +28,7 @@
 - **DoD:** ✅ `pytest` runs (collects conftest, 0 tests; exit 5 = "no tests", expected), `python -c "import leaklens"` works. Commit pending user go-ahead.
 
 ## Slice 1 — Inversion pipeline (Phase 1)
-- [ ] T1.1 `corpus/corpus.jsonl` curated (~200–300 labelled sentences) ← **your judgment**
+- [~] T1.1 `corpus/corpus.jsonl` GENERATED (240 rows: 60 plain/pii/credential/structured) via `corpus/build_corpus.py`; validator + `tests/test_corpus.py` green. ← **awaiting your curation pass** (design + convention approved; label+value entities, reserved-range fakes)
 - [ ] T1.2 `inverter.py` + `test_inverter.py` (golden round-trip)
 - [ ] T1.3 `adapters/base.py` + `chroma_adapter.py` + test
 - [ ] T1.4 `metrics.py` + `test_metrics.py` ← **you define + defend the threshold**

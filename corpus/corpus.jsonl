@@ -1,0 +1,240 @@
+{"id": "plain-001", "text": "Adoption of the recommendation engine climbed steadily after the redesign shipped.", "type": "plain", "key_entities": ["recommendation engine", "redesign"]}
+{"id": "plain-002", "text": "Engineering cut search index latency after a caching rewrite this quarter.", "type": "plain", "key_entities": ["search index", "latency", "caching"]}
+{"id": "plain-003", "text": "Migrating the onboarding flow off the legacy queue freed up two engineers.", "type": "plain", "key_entities": ["onboarding flow", "legacy queue"]}
+{"id": "plain-004", "text": "Heavy rain is expected across the northern hills through the weekend.", "type": "plain", "key_entities": ["northern hills"]}
+{"id": "plain-005", "text": "The hiking club mapped a new route through the pine forest ridge.", "type": "plain", "key_entities": ["hiking club", "pine forest ridge"]}
+{"id": "plain-006", "text": "Product and design reviewed the recommendation engine roadmap before the offsite.", "type": "plain", "key_entities": ["recommendation engine", "roadmap", "offsite"]}
+{"id": "plain-007", "text": "The data warehouse, long a source of pager alerts, finally stabilized this month.", "type": "plain", "key_entities": ["data warehouse", "pager alerts"]}
+{"id": "plain-008", "text": "Load on the analytics pipeline doubled during the holiday sale without incident.", "type": "plain", "key_entities": ["analytics pipeline", "holiday sale"]}
+{"id": "plain-009", "text": "The chef swapped butter for olive oil to lighten the classic sauce.", "type": "plain", "key_entities": ["chef", "olive oil", "classic sauce"]}
+{"id": "plain-010", "text": "We deprecated the old reporting dashboard client in favor of the new SDK.", "type": "plain", "key_entities": ["reporting dashboard", "SDK"]}
+{"id": "plain-011", "text": "Across three regions, the authentication layer now serves traffic without downtime.", "type": "plain", "key_entities": ["authentication layer", "three regions"]}
+{"id": "plain-012", "text": "The content management system finally got proper dashboards and alerting last week.", "type": "plain", "key_entities": ["content management system", "dashboards", "alerting"]}
+{"id": "plain-013", "text": "The team migrated the CI pipeline from nightly batch jobs to streaming last spring.", "type": "plain", "key_entities": ["CI pipeline", "batch jobs", "streaming"]}
+{"id": "plain-014", "text": "Load on the search index doubled during the holiday sale without incident.", "type": "plain", "key_entities": ["search index", "holiday sale"]}
+{"id": "plain-015", "text": "Why did the reporting dashboard slow down? A missing index turned out to be the cause.", "type": "plain", "key_entities": ["reporting dashboard", "missing index"]}
+{"id": "plain-016", "text": "Engineering cut design system latency after a caching rewrite this quarter.", "type": "plain", "key_entities": ["design system", "latency", "caching"]}
+{"id": "plain-017", "text": "The annual ride across the valley drew hundreds of cyclists at dawn.", "type": "plain", "key_entities": ["annual ride", "valley", "cyclists"]}
+{"id": "plain-018", "text": "Local farmers reported a strong harvest despite the unusually dry summer.", "type": "plain", "key_entities": ["harvest", "dry summer"]}
+{"id": "plain-019", "text": "The billing service team shipped a redesign that cut support tickets in half.", "type": "plain", "key_entities": ["billing service", "redesign", "support tickets"]}
+{"id": "plain-020", "text": "The orchestra rehearsed the symphony's final movement late into the evening.", "type": "plain", "key_entities": ["orchestra", "symphony", "final movement"]}
+{"id": "plain-021", "text": "The data warehouse passed its load test at ten thousand concurrent users.", "type": "plain", "key_entities": ["data warehouse", "load test", "ten thousand concurrent users"]}
+{"id": "plain-022", "text": "The notification service now backs up to cold storage every night.", "type": "plain", "key_entities": ["notification service", "cold storage"]}
+{"id": "plain-023", "text": "Documentation for the design system was refreshed during the last sprint.", "type": "plain", "key_entities": ["design system", "sprint"]}
+{"id": "plain-024", "text": "A flaky test in the reporting dashboard suite was quarantined until the fix landed.", "type": "plain", "key_entities": ["reporting dashboard", "flaky test"]}
+{"id": "plain-025", "text": "By caching hot keys, the search index shaved milliseconds off every request.", "type": "plain", "key_entities": ["search index", "hot keys", "milliseconds"]}
+{"id": "plain-026", "text": "The team migrated the onboarding flow from nightly batch jobs to streaming last spring.", "type": "plain", "key_entities": ["onboarding flow", "batch jobs", "streaming"]}
+{"id": "plain-027", "text": "The recipe calls for slow-roasting the vegetables before adding the broth.", "type": "plain", "key_entities": ["slow-roasting", "vegetables", "broth"]}
+{"id": "plain-028", "text": "We deprecated the old billing service client in favor of the new SDK.", "type": "plain", "key_entities": ["billing service", "SDK"]}
+{"id": "plain-029", "text": "Nobody expected the billing service to become the most-used feature this year.", "type": "plain", "key_entities": ["billing service", "most-used feature"]}
+{"id": "plain-030", "text": "The payment gateway passed its load test at ten thousand concurrent users.", "type": "plain", "key_entities": ["payment gateway", "load test", "ten thousand concurrent users"]}
+{"id": "plain-031", "text": "After the outage, the billing service added circuit breakers to fail fast.", "type": "plain", "key_entities": ["billing service", "outage", "circuit breakers"]}
+{"id": "plain-032", "text": "The recommendation engine team shipped a redesign that cut support tickets in half.", "type": "plain", "key_entities": ["recommendation engine", "redesign", "support tickets"]}
+{"id": "plain-033", "text": "The quarterly review noted a 6 percent improvement in design system reliability.", "type": "plain", "key_entities": ["design system", "6 percent", "reliability"]}
+{"id": "plain-034", "text": "Our on-call team rewrote the analytics pipeline retry logic to stop cascading failures.", "type": "plain", "key_entities": ["analytics pipeline", "retry logic", "cascading failures"]}
+{"id": "plain-035", "text": "Why did the inventory tracker slow down? A missing index turned out to be the cause.", "type": "plain", "key_entities": ["inventory tracker", "missing index"]}
+{"id": "plain-036", "text": "The team migrated the recommendation engine from nightly batch jobs to streaming last spring.", "type": "plain", "key_entities": ["recommendation engine", "batch jobs", "streaming"]}
+{"id": "plain-037", "text": "The film festival announced its lineup of documentaries and short features.", "type": "plain", "key_entities": ["film festival", "documentaries", "short features"]}
+{"id": "plain-038", "text": "The onboarding flow passed its load test at ten thousand concurrent users.", "type": "plain", "key_entities": ["onboarding flow", "load test", "ten thousand concurrent users"]}
+{"id": "plain-039", "text": "The debate team argued both sides of the housing policy question.", "type": "plain", "key_entities": ["debate team", "housing policy"]}
+{"id": "plain-040", "text": "The notification service finally got proper dashboards and alerting last week.", "type": "plain", "key_entities": ["notification service", "dashboards", "alerting"]}
+{"id": "plain-041", "text": "The payment gateway, long a source of pager alerts, finally stabilized this month.", "type": "plain", "key_entities": ["payment gateway", "pager alerts"]}
+{"id": "plain-042", "text": "By caching hot keys, the analytics pipeline shaved milliseconds off every request.", "type": "plain", "key_entities": ["analytics pipeline", "hot keys", "milliseconds"]}
+{"id": "plain-043", "text": "Researchers observed the migrating cranes returning to the wetlands early.", "type": "plain", "key_entities": ["migrating cranes", "wetlands"]}
+{"id": "plain-044", "text": "After the outage, the authentication layer added circuit breakers to fail fast.", "type": "plain", "key_entities": ["authentication layer", "outage", "circuit breakers"]}
+{"id": "plain-045", "text": "Nobody expected the authentication layer to become the most-used feature this year.", "type": "plain", "key_entities": ["authentication layer", "most-used feature"]}
+{"id": "plain-046", "text": "The library extended its opening hours during the exam season.", "type": "plain", "key_entities": ["library", "opening hours", "exam season"]}
+{"id": "plain-047", "text": "The analytics pipeline, long a source of pager alerts, finally stabilized this month.", "type": "plain", "key_entities": ["analytics pipeline", "pager alerts"]}
+{"id": "plain-048", "text": "Migrating the data warehouse off the legacy queue freed up two engineers.", "type": "plain", "key_entities": ["data warehouse", "legacy queue"]}
+{"id": "plain-049", "text": "Why did the payment gateway slow down? A missing index turned out to be the cause.", "type": "plain", "key_entities": ["payment gateway", "missing index"]}
+{"id": "plain-050", "text": "Our on-call team rewrote the onboarding flow retry logic to stop cascading failures.", "type": "plain", "key_entities": ["onboarding flow", "retry logic", "cascading failures"]}
+{"id": "plain-051", "text": "The museum's new exhibit on deep-sea life opens to the public next Tuesday.", "type": "plain", "key_entities": ["deep-sea life", "exhibit"]}
+{"id": "plain-052", "text": "After the outage, the analytics pipeline added circuit breakers to fail fast.", "type": "plain", "key_entities": ["analytics pipeline", "outage", "circuit breakers"]}
+{"id": "plain-053", "text": "Our on-call team rewrote the CI pipeline retry logic to stop cascading failures.", "type": "plain", "key_entities": ["CI pipeline", "retry logic", "cascading failures"]}
+{"id": "plain-054", "text": "Product and design reviewed the payment gateway roadmap before the offsite.", "type": "plain", "key_entities": ["payment gateway", "roadmap", "offsite"]}
+{"id": "plain-055", "text": "Once the design system moved to read replicas, tail latency dropped sharply.", "type": "plain", "key_entities": ["design system", "read replicas", "tail latency"]}
+{"id": "plain-056", "text": "The gallery's photography show drew visitors from neighboring towns.", "type": "plain", "key_entities": ["gallery", "photography show"]}
+{"id": "plain-057", "text": "Adoption of the analytics pipeline climbed steadily after the redesign shipped.", "type": "plain", "key_entities": ["analytics pipeline", "redesign"]}
+{"id": "plain-058", "text": "The quarterly review noted a 6 percent improvement in reporting dashboard reliability.", "type": "plain", "key_entities": ["reporting dashboard", "6 percent", "reliability"]}
+{"id": "plain-059", "text": "Migrating the authentication layer off the legacy queue freed up two engineers.", "type": "plain", "key_entities": ["authentication layer", "legacy queue"]}
+{"id": "plain-060", "text": "Across three regions, the data warehouse now serves traffic without downtime.", "type": "plain", "key_entities": ["data warehouse", "three regions"]}
+{"id": "pii-001", "text": "Call Aisha Khan on 555-0112 to confirm the renewal notice.", "type": "pii", "key_entities": ["Aisha Khan", "555-0112"]}
+{"id": "pii-002", "text": "Ship the parcel to Kenji Tanaka, 301 Mock Boulevard, Westborough 08890.", "type": "pii", "key_entities": ["Kenji Tanaka", "301 Mock Boulevard", "Westborough", "08890"]}
+{"id": "pii-003", "text": "Aisha Khan can be reached at 555-0112 after noon.", "type": "pii", "key_entities": ["Aisha Khan", "555-0112"]}
+{"id": "pii-004", "text": "Elena Vasquez's date of birth is recorded as 1979-11-03.", "type": "pii", "key_entities": ["Elena Vasquez", "1979-11-03"]}
+{"id": "pii-005", "text": "Loop in Tom Becker at tom.becker@example.com on the thread.", "type": "pii", "key_entities": ["Tom Becker", "tom.becker@example.com"]}
+{"id": "pii-006", "text": "Email Sofia Rossi at sofia.rossi@example.com about the delivery window.", "type": "pii", "key_entities": ["Sofia Rossi", "sofia.rossi@example.com"]}
+{"id": "pii-007", "text": "Email Priya Sharma at priya.sharma@example.com about the refund request.", "type": "pii", "key_entities": ["Priya Sharma", "priya.sharma@example.com"]}
+{"id": "pii-008", "text": "The billing address for Elena Vasquez is 7 Placeholder Road, Riverton 03310.", "type": "pii", "key_entities": ["Elena Vasquez", "7 Placeholder Road", "Riverton", "03310"]}
+{"id": "pii-009", "text": "Tom Becker's contact address on file is tom.becker@example.com.", "type": "pii", "key_entities": ["Tom Becker", "tom.becker@example.com"]}
+{"id": "pii-010", "text": "The callback number for Samuel Adeyemi is 555-0125.", "type": "pii", "key_entities": ["Samuel Adeyemi", "555-0125"]}
+{"id": "pii-011", "text": "The billing address for Hannah Cohen is 64 Sandbox Drive, Oakdale 12000.", "type": "pii", "key_entities": ["Hannah Cohen", "64 Sandbox Drive", "Oakdale", "12000"]}
+{"id": "pii-012", "text": "Leave a voicemail for Hannah Cohen at 555-0129.", "type": "pii", "key_entities": ["Hannah Cohen", "555-0129"]}
+{"id": "pii-013", "text": "Farah Nasser was born on 1975-06-21 according to the record.", "type": "pii", "key_entities": ["Farah Nasser", "1975-06-21"]}
+{"id": "pii-014", "text": "Register Nadia Ali at 12 Example Ave, Springfield 00100 for pickup.", "type": "pii", "key_entities": ["Nadia Ali", "12 Example Ave", "Springfield", "00100"]}
+{"id": "pii-015", "text": "Elena Vasquez can be reached at 555-0122 after noon.", "type": "pii", "key_entities": ["Elena Vasquez", "555-0122"]}
+{"id": "pii-016", "text": "Marcus Bell was born on 1995-07-28 according to the record.", "type": "pii", "key_entities": ["Marcus Bell", "1995-07-28"]}
+{"id": "pii-017", "text": "Deliver the documents to Marcus Bell at 155 Test Lane, Lakeside 04405.", "type": "pii", "key_entities": ["Marcus Bell", "155 Test Lane", "Lakeside", "04405"]}
+{"id": "pii-018", "text": "Ivan Petrov moved to 64 Sandbox Drive, Oakdale 12000 last month.", "type": "pii", "key_entities": ["Ivan Petrov", "64 Sandbox Drive", "Oakdale", "12000"]}
+{"id": "pii-019", "text": "On file: Tom Becker, date of birth 1990-04-12.", "type": "pii", "key_entities": ["Tom Becker", "1990-04-12"]}
+{"id": "pii-020", "text": "Deliver the documents to Grace Okoro at 5 Demo Terrace, Millbrook 09005.", "type": "pii", "key_entities": ["Grace Okoro", "5 Demo Terrace", "Millbrook", "09005"]}
+{"id": "pii-021", "text": "Lena Fischer can be reached at 555-0114 after noon.", "type": "pii", "key_entities": ["Lena Fischer", "555-0114"]}
+{"id": "pii-022", "text": "Ship the parcel to Nadia Ali, 12 Example Ave, Springfield 00100.", "type": "pii", "key_entities": ["Nadia Ali", "12 Example Ave", "Springfield", "00100"]}
+{"id": "pii-023", "text": "Verify Priya Sharma's identity using the birth date 1988-02-17.", "type": "pii", "key_entities": ["Priya Sharma", "1988-02-17"]}
+{"id": "pii-024", "text": "Omar Haddad moved to 23 Fictional Way, Ashford 06120 last month.", "type": "pii", "key_entities": ["Omar Haddad", "23 Fictional Way", "Ashford", "06120"]}
+{"id": "pii-025", "text": "Update the mailing preferences for Chloe Dubois at chloe.dubois@example.com.", "type": "pii", "key_entities": ["Chloe Dubois", "chloe.dubois@example.com"]}
+{"id": "pii-026", "text": "On file: Lena Fischer, date of birth 1983-01-09.", "type": "pii", "key_entities": ["Lena Fischer", "1983-01-09"]}
+{"id": "pii-027", "text": "Forward the report to ivan.petrov@example.com, addressed to Ivan Petrov.", "type": "pii", "key_entities": ["Ivan Petrov", "ivan.petrov@example.com"]}
+{"id": "pii-028", "text": "The callback number for Daniel Reyes is 555-0111.", "type": "pii", "key_entities": ["Daniel Reyes", "555-0111"]}
+{"id": "pii-029", "text": "Text Diego Morales at 555-0128 once the parcel ships.", "type": "pii", "key_entities": ["Diego Morales", "555-0128"]}
+{"id": "pii-030", "text": "Ship the parcel to Priya Sharma, 12 Example Ave, Springfield 00100.", "type": "pii", "key_entities": ["Priya Sharma", "12 Example Ave", "Springfield", "00100"]}
+{"id": "pii-031", "text": "Leave a voicemail for Chloe Dubois at 555-0124.", "type": "pii", "key_entities": ["Chloe Dubois", "555-0124"]}
+{"id": "pii-032", "text": "Send the receipt to Priya Sharma at priya.sharma@example.com by end of day.", "type": "pii", "key_entities": ["Priya Sharma", "priya.sharma@example.com"]}
+{"id": "pii-033", "text": "Samuel Adeyemi's contact address on file is samuel.adeyemi@example.com.", "type": "pii", "key_entities": ["Samuel Adeyemi", "samuel.adeyemi@example.com"]}
+{"id": "pii-034", "text": "The billing address for Mei Lin is 89 Dummy Court, Brookline 07008.", "type": "pii", "key_entities": ["Mei Lin", "89 Dummy Court", "Brookline", "07008"]}
+{"id": "pii-035", "text": "Forward the report to aisha.khan@example.com, addressed to Aisha Khan.", "type": "pii", "key_entities": ["Aisha Khan", "aisha.khan@example.com"]}
+{"id": "pii-036", "text": "Text Marcus Bell at 555-0113 once the parcel ships.", "type": "pii", "key_entities": ["Marcus Bell", "555-0113"]}
+{"id": "pii-037", "text": "Register Raj Malhotra at 155 Test Lane, Lakeside 04405 for pickup.", "type": "pii", "key_entities": ["Raj Malhotra", "155 Test Lane", "Lakeside", "04405"]}
+{"id": "pii-038", "text": "Verify Grace Okoro's identity using the birth date 1998-03-06.", "type": "pii", "key_entities": ["Grace Okoro", "1998-03-06"]}
+{"id": "pii-039", "text": "The account for Mei Lin lists a date of birth of 1992-12-15.", "type": "pii", "key_entities": ["Mei Lin", "1992-12-15"]}
+{"id": "pii-040", "text": "Hannah Cohen's date of birth is recorded as 1986-10-24.", "type": "pii", "key_entities": ["Hannah Cohen", "1986-10-24"]}
+{"id": "pii-041", "text": "Register Grace Okoro at 5 Demo Terrace, Millbrook 09005 for pickup.", "type": "pii", "key_entities": ["Grace Okoro", "5 Demo Terrace", "Millbrook", "09005"]}
+{"id": "pii-042", "text": "Diego Morales's date of birth is recorded as 1998-03-06.", "type": "pii", "key_entities": ["Diego Morales", "1998-03-06"]}
+{"id": "pii-043", "text": "Aisha Khan was born on 1979-11-03 according to the record.", "type": "pii", "key_entities": ["Aisha Khan", "1979-11-03"]}
+{"id": "pii-044", "text": "Update the mailing preferences for Omar Haddad at omar.haddad@example.com.", "type": "pii", "key_entities": ["Omar Haddad", "omar.haddad@example.com"]}
+{"id": "pii-045", "text": "Reach Omar Haddad on 555-0115 regarding the delivery window.", "type": "pii", "key_entities": ["Omar Haddad", "555-0115"]}
+{"id": "pii-046", "text": "Call Kenji Tanaka on 555-0117 to confirm the account update.", "type": "pii", "key_entities": ["Kenji Tanaka", "555-0117"]}
+{"id": "pii-047", "text": "On file: Mei Lin, date of birth 1992-12-15.", "type": "pii", "key_entities": ["Mei Lin", "1992-12-15"]}
+{"id": "pii-048", "text": "Reach Diego Morales on 555-0128 regarding the renewal notice.", "type": "pii", "key_entities": ["Diego Morales", "555-0128"]}
+{"id": "pii-049", "text": "Loop in Lena Fischer at lena.fischer@example.com on the thread.", "type": "pii", "key_entities": ["Lena Fischer", "lena.fischer@example.com"]}
+{"id": "pii-050", "text": "Chloe Dubois moved to 1600 Example Ave, Greenville 55010 last month.", "type": "pii", "key_entities": ["Chloe Dubois", "1600 Example Ave", "Greenville", "55010"]}
+{"id": "pii-051", "text": "The account for Kenji Tanaka lists a date of birth of 1975-06-21.", "type": "pii", "key_entities": ["Kenji Tanaka", "1975-06-21"]}
+{"id": "pii-052", "text": "The callback number for Ivan Petrov is 555-0119.", "type": "pii", "key_entities": ["Ivan Petrov", "555-0119"]}
+{"id": "pii-053", "text": "Diego Morales's contact address on file is diego.morales@example.com.", "type": "pii", "key_entities": ["Diego Morales", "diego.morales@example.com"]}
+{"id": "pii-054", "text": "The account for Farah Nasser lists a date of birth of 1975-06-21.", "type": "pii", "key_entities": ["Farah Nasser", "1975-06-21"]}
+{"id": "pii-055", "text": "Forward the report to kenji.tanaka@example.com, addressed to Kenji Tanaka.", "type": "pii", "key_entities": ["Kenji Tanaka", "kenji.tanaka@example.com"]}
+{"id": "pii-056", "text": "Send the receipt to Diego Morales at diego.morales@example.com by end of day.", "type": "pii", "key_entities": ["Diego Morales", "diego.morales@example.com"]}
+{"id": "pii-057", "text": "Text Nadia Ali at 555-0120 once the parcel ships.", "type": "pii", "key_entities": ["Nadia Ali", "555-0120"]}
+{"id": "pii-058", "text": "Verify Farah Nasser's identity using the birth date 1975-06-21.", "type": "pii", "key_entities": ["Farah Nasser", "1975-06-21"]}
+{"id": "pii-059", "text": "Email Grace Okoro at grace.okoro@example.com about the delivery window.", "type": "pii", "key_entities": ["Grace Okoro", "grace.okoro@example.com"]}
+{"id": "pii-060", "text": "Leave a voicemail for Marcus Bell at 555-0113.", "type": "pii", "key_entities": ["Marcus Bell", "555-0113"]}
+{"id": "cred-001", "text": "Revoke the deploy key ssh-ed25519-EXAMPLE-9ee11b once the contractor leaves.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-9ee11b"]}
+{"id": "cred-002", "text": "The connection string redis://cache:Zephyr22_cove@db.example.com:6379/0 is in the config.", "type": "credential", "key_entities": ["connection string", "Zephyr22_cove"]}
+{"id": "cred-003", "text": "Provision a new AWS access key AKIAP8IY3X80JEXAMPLE for the development role.", "type": "credential", "key_entities": ["AWS access key", "AKIAP8IY3X80JEXAMPLE"]}
+{"id": "cred-004", "text": "The deploy key ssh-ed25519-EXAMPLE-eeaa4e grants access to the release pipeline.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-eeaa4e"]}
+{"id": "cred-005", "text": "Reset the readonly password to Cloud26_luna before the security review.", "type": "credential", "key_entities": ["readonly password", "Cloud26_luna"]}
+{"id": "cred-006", "text": "Connect using the connection string mysql://app:Harbor30&falc@db.example.com:3306/main.", "type": "credential", "key_entities": ["connection string", "Harbor30&falc"]}
+{"id": "cred-007", "text": "Regenerate the API token sk-test-m7q1sRBLRswT6VWAL3JkqZEJ after the incident.", "type": "credential", "key_entities": ["API token", "sk-test-m7q1sRBLRswT6VWAL3JkqZEJ"]}
+{"id": "cred-008", "text": "The sandbox API token is sk-test-q3BIAWyyPlUBLQDIvahHvEec and must not be shared.", "type": "credential", "key_entities": ["API token", "sk-test-q3BIAWyyPlUBLQDIvahHvEec"]}
+{"id": "cred-009", "text": "The AWS access key AKIALMI8X76RKEXAMPLE was revoked after the review.", "type": "credential", "key_entities": ["AWS access key", "AKIALMI8X76RKEXAMPLE"]}
+{"id": "cred-010", "text": "Set the readonly password to Tundra79!harb on first login.", "type": "credential", "key_entities": ["readonly password", "Tundra79!harb"]}
+{"id": "cred-011", "text": "The webhook uses the API token sk-test-rFRcqbfmcaRNwgHWbHSrrlfh for authentication.", "type": "credential", "key_entities": ["API token", "sk-test-rFRcqbfmcaRNwgHWbHSrrlfh"]}
+{"id": "cred-012", "text": "The connection string is postgres://svc:Flint20_aspe@db.example.com:5432/app.", "type": "credential", "key_entities": ["connection string", "Flint20_aspe"]}
+{"id": "cred-013", "text": "The development API token is sk-test-glGcgO8nCuy63qhTdp9BDe2Z and must not be shared.", "type": "credential", "key_entities": ["API token", "sk-test-glGcgO8nCuy63qhTdp9BDe2Z"]}
+{"id": "cred-014", "text": "Rotate the AWS access key AKIAD5SOWOMQIEXAMPLE in the staging account.", "type": "credential", "key_entities": ["AWS access key", "AKIAD5SOWOMQIEXAMPLE"]}
+{"id": "cred-015", "text": "The AWS access key AKIA4SVH3EJOZEXAMPLE was revoked after the review.", "type": "credential", "key_entities": ["AWS access key", "AKIA4SVH3EJOZEXAMPLE"]}
+{"id": "cred-016", "text": "Do not commit the AWS access key AKIAG50RCXN22EXAMPLE to the repository.", "type": "credential", "key_entities": ["AWS access key", "AKIAG50RCXN22EXAMPLE"]}
+{"id": "cred-017", "text": "The root password is Tundra52_basi; store it in the vault.", "type": "credential", "key_entities": ["root password", "Tundra52_basi"]}
+{"id": "cred-018", "text": "Use Cove79$nort as the staging password for the staging box.", "type": "credential", "key_entities": ["staging password", "Cove79$nort"]}
+{"id": "cred-019", "text": "Connect using the connection string mysql://app:Yukon46*nimb@db.example.com:3306/main.", "type": "credential", "key_entities": ["connection string", "Yukon46*nimb"]}
+{"id": "cred-020", "text": "The connection string redis://cache:Basil46^grov@db.example.com:6379/0 is in the config.", "type": "credential", "key_entities": ["connection string", "Basil46^grov"]}
+{"id": "cred-021", "text": "Reset the admin password to Zephyr70*basi before the next deploy.", "type": "credential", "key_entities": ["admin password", "Zephyr70*basi"]}
+{"id": "cred-022", "text": "Set the deploy password to Pine91#ceda on first login.", "type": "credential", "key_entities": ["deploy password", "Pine91#ceda"]}
+{"id": "cred-023", "text": "The admin password is Grove28*tund; store it in the vault.", "type": "credential", "key_entities": ["admin password", "Grove28*tund"]}
+{"id": "cred-024", "text": "Regenerate the API token sk-test-zIjDl9jjVqHaW3q8wb36uD9S after the incident.", "type": "credential", "key_entities": ["API token", "sk-test-zIjDl9jjVqHaW3q8wb36uD9S"]}
+{"id": "cred-025", "text": "Set the service password to Aspen97^rave on first login.", "type": "credential", "key_entities": ["service password", "Aspen97^rave"]}
+{"id": "cred-026", "text": "The root password is Slate43&harb; store it in the vault.", "type": "credential", "key_entities": ["root password", "Slate43&harb"]}
+{"id": "cred-027", "text": "Temporary readonly password: Yukon84$rave (change after use).", "type": "credential", "key_entities": ["readonly password", "Yukon84$rave"]}
+{"id": "cred-028", "text": "Store the API token sk-test-ZauGUbUqQX9Jr7eEF1FFbGvv in the secrets manager.", "type": "credential", "key_entities": ["API token", "sk-test-ZauGUbUqQX9Jr7eEF1FFbGvv"]}
+{"id": "cred-029", "text": "Use Tundra48%basi as the readonly password for the staging box.", "type": "credential", "key_entities": ["readonly password", "Tundra48%basi"]}
+{"id": "cred-030", "text": "Store the API token sk-test-rGft6cE5FUmJEIRnoljtUYmh in the secrets manager.", "type": "credential", "key_entities": ["API token", "sk-test-rGft6cE5FUmJEIRnoljtUYmh"]}
+{"id": "cred-031", "text": "The connection string redis://cache:Ridge90&nort@db.example.com:6379/0 is in the config.", "type": "credential", "key_entities": ["connection string", "Ridge90&nort"]}
+{"id": "cred-032", "text": "Store the deploy key ssh-ed25519-EXAMPLE-c0a5eb in the vault, not in source control.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-c0a5eb"]}
+{"id": "cred-033", "text": "Do not commit the AWS access key AKIA3FNBDVPINEXAMPLE to the repository.", "type": "credential", "key_entities": ["AWS access key", "AKIA3FNBDVPINEXAMPLE"]}
+{"id": "cred-034", "text": "The webhook uses the API token sk-test-FvhNYadVKXTuUx8kmF4DJKwn for authentication.", "type": "credential", "key_entities": ["API token", "sk-test-FvhNYadVKXTuUx8kmF4DJKwn"]}
+{"id": "cred-035", "text": "Add the deploy key ssh-ed25519-EXAMPLE-d37dc2 to the development server.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-d37dc2"]}
+{"id": "cred-036", "text": "Temporary root password: Harbor58+cove (change after use).", "type": "credential", "key_entities": ["root password", "Harbor58+cove"]}
+{"id": "cred-037", "text": "The staging API token is sk-test-1wjNlN03OVxJy5mAR2JIiQzL and must not be shared.", "type": "credential", "key_entities": ["API token", "sk-test-1wjNlN03OVxJy5mAR2JIiQzL"]}
+{"id": "cred-038", "text": "Rotate the AWS access key AKIACT2CXIFSUEXAMPLE in the development account.", "type": "credential", "key_entities": ["AWS access key", "AKIACT2CXIFSUEXAMPLE"]}
+{"id": "cred-039", "text": "Add the deploy key ssh-ed25519-EXAMPLE-9a7a52 to the staging server.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-9a7a52"]}
+{"id": "cred-040", "text": "Store the API token sk-test-dgmbGysH2pp4xju3Nbc4OaV0 in the secrets manager.", "type": "credential", "key_entities": ["API token", "sk-test-dgmbGysH2pp4xju3Nbc4OaV0"]}
+{"id": "cred-041", "text": "Temporary staging password: Cedar42!will (change after use).", "type": "credential", "key_entities": ["staging password", "Cedar42!will"]}
+{"id": "cred-042", "text": "The connection string is postgres://svc:Cedar66_cora@db.example.com:5432/app.", "type": "credential", "key_entities": ["connection string", "Cedar66_cora"]}
+{"id": "cred-043", "text": "Rotate the AWS access key AKIAGPYWSSBZREXAMPLE in the staging account.", "type": "credential", "key_entities": ["AWS access key", "AKIAGPYWSSBZREXAMPLE"]}
+{"id": "cred-044", "text": "The connection string is postgres://svc:Quartz15%flin@db.example.com:5432/app.", "type": "credential", "key_entities": ["connection string", "Quartz15%flin"]}
+{"id": "cred-045", "text": "The deploy key ssh-ed25519-EXAMPLE-865425 grants access to the release pipeline.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-865425"]}
+{"id": "cred-046", "text": "Use Lunar48*flin as the backup password for the staging box.", "type": "credential", "key_entities": ["backup password", "Lunar48*flin"]}
+{"id": "cred-047", "text": "Store the deploy key ssh-ed25519-EXAMPLE-b2c1d0 in the vault, not in source control.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-b2c1d0"]}
+{"id": "cred-048", "text": "The AWS access key AKIAFZAQ8H3XQEXAMPLE was revoked after the review.", "type": "credential", "key_entities": ["AWS access key", "AKIAFZAQ8H3XQEXAMPLE"]}
+{"id": "cred-049", "text": "Provision a new AWS access key AKIAXGO4B9UOEEXAMPLE for the development role.", "type": "credential", "key_entities": ["AWS access key", "AKIAXGO4B9UOEEXAMPLE"]}
+{"id": "cred-050", "text": "Reset the root password to Tundra66#cora before end of week.", "type": "credential", "key_entities": ["root password", "Tundra66#cora"]}
+{"id": "cred-051", "text": "Do not commit the AWS access key AKIAXGX8WDZRMEXAMPLE to the repository.", "type": "credential", "key_entities": ["AWS access key", "AKIAXGX8WDZRMEXAMPLE"]}
+{"id": "cred-052", "text": "Add the deploy key ssh-ed25519-EXAMPLE-6bb473 to the production server.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-6bb473"]}
+{"id": "cred-053", "text": "Connect using the connection string mysql://app:Marsh53+clou@db.example.com:3306/main.", "type": "credential", "key_entities": ["connection string", "Marsh53+clou"]}
+{"id": "cred-054", "text": "Revoke the deploy key ssh-ed25519-EXAMPLE-af41e3 once the contractor leaves.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-af41e3"]}
+{"id": "cred-055", "text": "The webhook uses the API token sk-test-COZmDANT8NxIwQSUHAfvbLIY for authentication.", "type": "credential", "key_entities": ["API token", "sk-test-COZmDANT8NxIwQSUHAfvbLIY"]}
+{"id": "cred-056", "text": "The deploy key ssh-ed25519-EXAMPLE-fe981b grants access to the release pipeline.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-fe981b"]}
+{"id": "cred-057", "text": "Store the deploy key ssh-ed25519-EXAMPLE-2adcd9 in the vault, not in source control.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-2adcd9"]}
+{"id": "cred-058", "text": "Revoke the deploy key ssh-ed25519-EXAMPLE-22ce1e once the contractor leaves.", "type": "credential", "key_entities": ["deploy key", "ssh-ed25519-EXAMPLE-22ce1e"]}
+{"id": "cred-059", "text": "Rotate the staging password to Falcon57*embe this cycle.", "type": "credential", "key_entities": ["staging password", "Falcon57*embe"]}
+{"id": "cred-060", "text": "Rotate the deploy password to Lunar97$quar this cycle.", "type": "credential", "key_entities": ["deploy password", "Lunar97$quar"]}
+{"id": "struct-001", "text": "Invoice INV-5377 for $742.99 was issued on 2026-02-08.", "type": "structured", "key_entities": ["Invoice", "INV-5377", "$742.99", "2026-02-08"]}
+{"id": "struct-002", "text": "Open port 5432 on 192.0.2.10 for the cache-01 replica.", "type": "structured", "key_entities": ["port 5432", "192.0.2.10", "cache-01"]}
+{"id": "struct-003", "text": "Invoice INV-5602 for $8,675.30 was issued on 2026-04-23.", "type": "structured", "key_entities": ["Invoice", "INV-5602", "$8,675.30", "2026-04-23"]}
+{"id": "struct-004", "text": "The service reads FLUSH_EVERY=1000 from the environment file.", "type": "structured", "key_entities": ["FLUSH_EVERY=1000", "environment file"]}
+{"id": "struct-005", "text": "Override RETRY_BACKOFF=250 for the load test.", "type": "structured", "key_entities": ["RETRY_BACKOFF=250", "load test"]}
+{"id": "struct-006", "text": "Payment for invoice INV-5602 of $49.95 cleared on 2025-07-04.", "type": "structured", "key_entities": ["invoice", "INV-5602", "$49.95", "2025-07-04"]}
+{"id": "struct-007", "text": "The order references account number 000753951456 on invoice INV-4603.", "type": "structured", "key_entities": ["account number", "000753951456", "invoice", "INV-4603"]}
+{"id": "struct-008", "text": "The invoice for order ORD-2026-09015 totals $610.00.", "type": "structured", "key_entities": ["order", "ORD-2026-09015", "$610.00"]}
+{"id": "struct-009", "text": "The invoice for order ORD-2026-04420 totals $8,675.30.", "type": "structured", "key_entities": ["order", "ORD-2026-04420", "$8,675.30"]}
+{"id": "struct-010", "text": "The credit note for invoice INV-5044 was $4,299.99.", "type": "structured", "key_entities": ["invoice", "INV-5044", "$4,299.99"]}
+{"id": "struct-011", "text": "The database host queue-02 is reachable at 192.0.2.88 on port 443.", "type": "structured", "key_entities": ["database host", "192.0.2.88", "port 443"]}
+{"id": "struct-012", "text": "Order ORD-2026-15011 was cancelled before shipping on 2025-06-13.", "type": "structured", "key_entities": ["Order", "ORD-2026-15011", "2025-06-13"]}
+{"id": "struct-013", "text": "Transaction TXN-88301 cleared $1,249.50 to the merchant.", "type": "structured", "key_entities": ["Transaction", "TXN-88301", "$1,249.50"]}
+{"id": "struct-014", "text": "Order ORD-2026-01204 shipped on 2025-11-02 for a total of $3,410.75.", "type": "structured", "key_entities": ["Order", "ORD-2026-01204", "2025-11-02", "$3,410.75"]}
+{"id": "struct-015", "text": "The order references account number 000975318642 on invoice INV-5044.", "type": "structured", "key_entities": ["account number", "000975318642", "invoice", "INV-5044"]}
+{"id": "struct-016", "text": "Point the client at 192.0.2.150:27017 for the auth-01 service.", "type": "structured", "key_entities": ["auth-01", "192.0.2.150"]}
+{"id": "struct-017", "text": "Set the config key CACHE_TTL=3600 in the staging environment.", "type": "structured", "key_entities": ["config key", "CACHE_TTL=3600"]}
+{"id": "struct-018", "text": "We fulfilled order ORD-2026-14890 on 2025-07-04.", "type": "structured", "key_entities": ["order", "ORD-2026-14890", "2025-07-04"]}
+{"id": "struct-019", "text": "Order ORD-2026-10120 was cancelled before shipping on 2026-04-23.", "type": "structured", "key_entities": ["Order", "ORD-2026-10120", "2026-04-23"]}
+{"id": "struct-020", "text": "The database host index-03 is reachable at 192.0.2.101 on port 27017.", "type": "structured", "key_entities": ["database host", "192.0.2.101", "port 27017"]}
+{"id": "struct-021", "text": "The index-03 node moved to 192.0.2.66 during the migration.", "type": "structured", "key_entities": ["index-03", "192.0.2.66"]}
+{"id": "struct-022", "text": "The credit note for invoice INV-4712 was $333.33.", "type": "structured", "key_entities": ["invoice", "INV-4712", "$333.33"]}
+{"id": "struct-023", "text": "The database host auth-01 is reachable at 192.0.2.134 on port 9092.", "type": "structured", "key_entities": ["database host", "192.0.2.134", "port 9092"]}
+{"id": "struct-024", "text": "Order ORD-2026-12044 was cancelled before shipping on 2026-06-17.", "type": "structured", "key_entities": ["Order", "ORD-2026-12044", "2026-06-17"]}
+{"id": "struct-025", "text": "Invoice INV-4931 lists account number 000159357486 due on 2025-09-30.", "type": "structured", "key_entities": ["Invoice", "INV-4931", "account number", "000159357486", "2025-09-30"]}
+{"id": "struct-026", "text": "The default BATCH_SIZE=128 was raised last release.", "type": "structured", "key_entities": ["BATCH_SIZE=128"]}
+{"id": "struct-027", "text": "Order ORD-2026-09015 was refunded $12,000.00 on 2026-02-08.", "type": "structured", "key_entities": ["Order", "ORD-2026-09015", "$12,000.00", "2026-02-08"]}
+{"id": "struct-028", "text": "Point the client at 192.0.2.5:5432 for the queue-02 service.", "type": "structured", "key_entities": ["queue-02", "192.0.2.5"]}
+{"id": "struct-029", "text": "Order ORD-2026-05507 shipped on 2026-05-06 for a total of $49.95.", "type": "structured", "key_entities": ["Order", "ORD-2026-05507", "2026-05-06", "$49.95"]}
+{"id": "struct-030", "text": "Transaction TXN-89401 cleared $27,540.60 to the merchant.", "type": "structured", "key_entities": ["Transaction", "TXN-89401", "$27,540.60"]}
+{"id": "struct-031", "text": "We fulfilled order ORD-2026-13567 on 2026-06-17.", "type": "structured", "key_entities": ["order", "ORD-2026-13567", "2026-06-17"]}
+{"id": "struct-032", "text": "Invoice INV-5044 lists account number 000753951456 due on 2026-06-17.", "type": "structured", "key_entities": ["Invoice", "INV-5044", "account number", "000753951456", "2026-06-17"]}
+{"id": "struct-033", "text": "Transaction TXN-89244 cleared $1,000.00 to the merchant.", "type": "structured", "key_entities": ["Transaction", "TXN-89244", "$1,000.00"]}
+{"id": "struct-034", "text": "Payment for invoice INV-5499 of $8,675.30 cleared on 2026-06-17.", "type": "structured", "key_entities": ["invoice", "INV-5499", "$8,675.30", "2026-06-17"]}
+{"id": "struct-035", "text": "Open port 9092 on 192.0.2.66 for the index-03 replica.", "type": "structured", "key_entities": ["port 9092", "192.0.2.66", "index-03"]}
+{"id": "struct-036", "text": "Point the client at 192.0.2.210:1521 for the api-gw service.", "type": "structured", "key_entities": ["api-gw", "192.0.2.210"]}
+{"id": "struct-037", "text": "Transaction TXN-88213 of $742.99 settled on 2025-10-11.", "type": "structured", "key_entities": ["Transaction", "TXN-88213", "$742.99", "2025-10-11"]}
+{"id": "struct-038", "text": "The service reads RATE_LIMIT=100 from the environment file.", "type": "structured", "key_entities": ["RATE_LIMIT=100", "environment file"]}
+{"id": "struct-039", "text": "A chargeback hit transaction TXN-89012 for $12,000.00.", "type": "structured", "key_entities": ["transaction", "TXN-89012", "$12,000.00"]}
+{"id": "struct-040", "text": "Set the config key BATCH_SIZE=128 in the staging environment.", "type": "structured", "key_entities": ["config key", "BATCH_SIZE=128"]}
+{"id": "struct-041", "text": "The default QUEUE_DEPTH=512 was raised last release.", "type": "structured", "key_entities": ["QUEUE_DEPTH=512"]}
+{"id": "struct-042", "text": "The default TIMEOUT_MS=2000 was raised last release.", "type": "structured", "key_entities": ["TIMEOUT_MS=2000"]}
+{"id": "struct-043", "text": "Transaction TXN-88612 was reversed on 2026-01-31.", "type": "structured", "key_entities": ["Transaction", "TXN-88612", "2026-01-31"]}
+{"id": "struct-044", "text": "Transaction TXN-89377 was reversed on 2025-09-30.", "type": "structured", "key_entities": ["Transaction", "TXN-89377", "2025-09-30"]}
+{"id": "struct-045", "text": "A chargeback hit transaction TXN-88950 for $56.20.", "type": "structured", "key_entities": ["transaction", "TXN-88950", "$56.20"]}
+{"id": "struct-046", "text": "A chargeback hit transaction TXN-89377 for $8,675.30.", "type": "structured", "key_entities": ["transaction", "TXN-89377", "$8,675.30"]}
+{"id": "struct-047", "text": "Transaction TXN-88734 of $333.33 settled on 2026-07-01.", "type": "structured", "key_entities": ["Transaction", "TXN-88734", "$333.33", "2026-07-01"]}
+{"id": "struct-048", "text": "The db-prod node moved to 192.0.2.199 during the migration.", "type": "structured", "key_entities": ["db-prod", "192.0.2.199"]}
+{"id": "struct-049", "text": "Payment for invoice INV-5210 of $742.99 cleared on 2026-04-23.", "type": "structured", "key_entities": ["invoice", "INV-5210", "$742.99", "2026-04-23"]}
+{"id": "struct-050", "text": "Transaction TXN-88950 was reversed on 2025-12-25.", "type": "structured", "key_entities": ["Transaction", "TXN-88950", "2025-12-25"]}
+{"id": "struct-051", "text": "The order references account number 000864209753 on invoice INV-4931.", "type": "structured", "key_entities": ["account number", "000864209753", "invoice", "INV-4931"]}
+{"id": "struct-052", "text": "Open port 3306 on 192.0.2.120 for the auth-01 replica.", "type": "structured", "key_entities": ["port 3306", "192.0.2.120", "auth-01"]}
+{"id": "struct-053", "text": "Override QUEUE_DEPTH=512 for the load test.", "type": "structured", "key_entities": ["QUEUE_DEPTH=512", "load test"]}
+{"id": "struct-054", "text": "Invoice INV-4712 lists account number 000369258147 due on 2025-10-11.", "type": "structured", "key_entities": ["Invoice", "INV-4712", "account number", "000369258147", "2025-10-11"]}
+{"id": "struct-055", "text": "Order ORD-2026-10120 was refunded $742.99 on 2025-10-11.", "type": "structured", "key_entities": ["Order", "ORD-2026-10120", "$742.99", "2025-10-11"]}
+{"id": "struct-056", "text": "We fulfilled order ORD-2026-12044 on 2025-09-30.", "type": "structured", "key_entities": ["order", "ORD-2026-12044", "2025-09-30"]}
+{"id": "struct-057", "text": "Order ORD-2026-06612 shipped on 2025-12-25 for a total of $333.33.", "type": "structured", "key_entities": ["Order", "ORD-2026-06612", "2025-12-25", "$333.33"]}
+{"id": "struct-058", "text": "The credit note for invoice INV-4820 was $27,540.60.", "type": "structured", "key_entities": ["invoice", "INV-4820", "$27,540.60"]}
+{"id": "struct-059", "text": "Override SHARD_COUNT=4 for the load test.", "type": "structured", "key_entities": ["SHARD_COUNT=4", "load test"]}
+{"id": "struct-060", "text": "Set the config key MAX_RETRIES=5 in the staging environment.", "type": "structured", "key_entities": ["config key", "MAX_RETRIES=5"]}
