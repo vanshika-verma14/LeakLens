@@ -5,9 +5,9 @@
 ---
 
 ## Current status
-- **Phase:** Slice 1 in progress — T1.1 corpus generated, awaiting user curation.
-- **Last done:** T1.1 — `corpus/build_corpus.py` generates 240 labelled rows (60 each: plain/pii/credential/structured), verbatim-substring key_entities, reserved-range fakes. Validator + 5-test `tests/test_corpus.py` green (exit 0).
-- **Next action:** user curates `corpus/corpus.jsonl` wording/labels; then T1.2 `inverter.py` (+ golden test).
+- **Phase:** Slice 1 spine complete (T1.1–T1.6). End-to-end pipeline runs.
+- **Last done:** T1.5/T1.6 — `embed_corpus.py` builds a 240-vector Chroma store; `run_inversion_demo.py` samples (stratified, `--limit`), inverts, scores, prints per-category recall + threshold-free distribution. Verified on a 4-row subset (plain 1.00/pii 0.50/cred 0.50/struct 0.33).
+- **Next action:** (1) user runs `python scripts/run_inversion_demo.py --limit 30` to eyeball per-category shape, then `--full` for the real distribution → set leak threshold. (2) optional corpus curation pass (T1.1). Then Slice 2 (defenses/study) or Slice 3 (tool wrapper).
 
 ---
 
@@ -32,9 +32,9 @@
 - [x] T1.2 `leaklens/inversion/inverter.py` (Inverter: lazy load-once, CPU, encode/invert/roundtrip; `get_inverter()` singleton) + `tests/test_inverter.py`. Golden test is HONEST: low-entropy sentence, asserts ≥0.6 of key entities recovered (NOT exact-match), num_steps=5, `@slow` (run `pytest --runslow`). Calibration: 3/3 entities recovered at 5 steps, ~95s load+invert. Slow tests auto-set HF offline (see conftest).
 - [x] T1.3 `adapters/base.py` (Sample dataclass + VectorStoreAdapter ABC: add/sample/count) + `chroma_adapter.py` + `tests/test_chroma_adapter.py` (5 tests). sample() returns Sample{id,vector,text,type,key_entities}; key_entities JSON-serialized in Chroma metadata (Chroma forbids list values). chromadb==1.5.9 installed (pins held). ARCHITECTURE.md adapter snippet updated to Sample shape.
 - [x] T1.4 `leaklens/inversion/metrics.py` + `tests/test_metrics.py` (13 tests). Primary = key-entity recall, "found" = **case-insensitive substring** (your call; exact/fuzzy also computed into per-row `details`). Secondary = cosine (context only; stays 0.88–0.99 even when secret lost → not the verdict). `per_category_recall` + threshold-free `recall_distribution`. **No leak threshold hardcoded** — you set it from the distribution. Documented limitation: common-word labels (Order/Invoice/Transaction) can ci-match coincidentally → label recall overstates; value recovery is the honest signal (tests guard this).
-- [ ] T1.5 `scripts/embed_corpus.py` (corpus → Chroma)
-- [ ] T1.6 `scripts/run_inversion_demo.py` (the spine, end-to-end)
-- **DoD:** demo prints original↔recovered + score; metric defensible in two sentences.
+- [x] T1.5 `scripts/embed_corpus.py` — encodes corpus.jsonl (GTR) → Chroma store at `results/corpus_store` (gitignored); idempotent rebuild. Verified: count 240.
+- [x] T1.6 `scripts/run_inversion_demo.py` — spine: store → stratified sample → invert (batched) → `score_row` → print original↔recovered + per-category recall + threshold-free distribution; writes `results/inversion_demo.json`. **`--limit N` (default 30), `--full` opt-in**, `--num-steps`/`--seed`. Stratified subset via `stratified_sample` in adapters/base.py (+ `tests/test_sampling.py`, 4 tests). Verified with `--limit 4 --num-steps 5`: plain 1.00 / pii 0.50 / cred 0.50 / struct 0.33 — expected shape.
+- **DoD:** ✅ demo prints original↔recovered + score; metric defensible (key-entity ci recall; DECISIONS D5/#6). Awaiting your `--limit 30` run to set the leak threshold from the real distribution.
 
 ## Slice 2 — Defense tradeoff study (Phase 2) — the finding
 - [ ] T2.1 `defenses.py` (+σ noise, pooling, quantization) + test

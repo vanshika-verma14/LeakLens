@@ -6,6 +6,7 @@ contract that yields them.
 `type` and `key_entities`. Real breach targets won't have those (text/type None,
 key_entities empty) — that's expected, not an error.
 """
+import random
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 
@@ -39,3 +40,37 @@ class VectorStoreAdapter(ABC):
     @abstractmethod
     def count(self) -> int:
         """Number of vectors currently in the store."""
+
+
+def stratified_sample(samples: list[Sample], limit: int | None, *,
+                      seed: int | None = None) -> list[Sample]:
+    """Return a subset of `samples` balanced across `Sample.type`, round-robin.
+
+    A plain random draw of, say, 30 rows could land mostly in one category and hide the
+    per-category shape we want to inspect; round-robin across the types keeps every
+    category represented. Reproducible under `seed`. `limit` that is None, <= 0, or
+    >= len(samples) returns all of them (order preserved).
+    """
+    if limit is None or limit <= 0 or limit >= len(samples):
+        return list(samples)
+    rng = random.Random(seed)
+    by_type: dict[str, list[Sample]] = {}
+    for s in samples:
+        by_type.setdefault(s.type or "unknown", []).append(s)
+    for group in by_type.values():
+        rng.shuffle(group)
+    order = sorted(by_type)                 # deterministic category order
+    cursors = {t: 0 for t in order}
+    out: list[Sample] = []
+    while len(out) < limit:
+        progressed = False
+        for t in order:
+            if cursors[t] < len(by_type[t]):
+                out.append(by_type[t][cursors[t]])
+                cursors[t] += 1
+                progressed = True
+                if len(out) == limit:
+                    break
+        if not progressed:                  # every category exhausted
+            break
+    return out
