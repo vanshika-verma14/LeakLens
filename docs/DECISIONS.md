@@ -16,6 +16,7 @@
 | D6 | Compute | **Develop on CPU laptop; heavy sweeps on free Colab T4** | Demo runs fine on CPU (~48s/sentence). The Phase-2 defense sweep over a full corpus is the only heavy part → Colab, same code, still ₹0. |
 | D7 | Semantic-cache testbed | **GPTCache** | Pure-Python, CPU-friendly, the de-facto research testbed used across the poisoning papers. |
 | D8 | Framing | **Defensive self-audit**, not offensive | The attacks are cited research inputs; our layer is measure + score + remediate. Differentiates from the offensive attack repos. |
+| D9 | Leak threshold | **recall ≥ 0.6 = LEAK** (provisional) | Calibrated from the `--limit 30` recall distribution — 0.6 is where per-category recovery separates high-leak prose (plain median 1.00) from resistant high-entropy secrets (credential/structured median ≤0.50). Chosen from real data, not a priori. PII straddles, which is the honest mixed case. Final value to be re-confirmed against the full 240-row run. |
 
 ### GPU/NPU note (target hardware: AMD Ryzen AI 7 350, Radeon 860M iGPU, NPU)
 The iGPU (2 GB, shared RAM) and the NPU are **not usable for PyTorch** without major porting. Treat the machine as **CPU-only** — which is what every decision above already assumes. Do not spend time trying to accelerate on either; it's a multi-day detour for no project value.
