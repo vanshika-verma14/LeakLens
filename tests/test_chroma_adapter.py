@@ -64,3 +64,40 @@ def test_empty_store_samples_nothing(temp_store_dir):
     empty = ChromaAdapter(temp_store_dir, "empty")
     assert empty.count() == 0
     assert empty.sample(5) == []
+
+
+def test_get_all_returns_all_samples_with_vectors(temp_store_dir):
+    # The regression guard: get_all() must return every row WITH a non-empty embedding of
+    # the right dimension. A store that silently drops embeddings would fail here, not
+    # 30 minutes into a --full sweep with a numpy AxisError.
+    a = ChromaAdapter(temp_store_dir, "docs")
+    a.add(SAMPLES[:3])
+    got = a.get_all()
+    assert len(got) == 3
+    for s in got:
+        assert s.vector, "get_all() must return a non-empty embedding"
+        assert len(s.vector) == 4            # SAMPLES are 4-dim
+    assert {s.id for s in got} == {s.id for s in SAMPLES[:3]}
+
+
+def test_get_all_raises_when_embeddings_missing(temp_store_dir):
+    # If Chroma hands back no embeddings, fail loudly instead of a degenerate 0-vector store.
+    a = ChromaAdapter(temp_store_dir, "docs")
+    a.add(SAMPLES[:3])
+    a._col.get(include=["embeddings", "metadatas", "documents"])  # sanity: real path works
+    a._col = _NoEmbeddingCollection(a._col)
+    with pytest.raises(RuntimeError, match="embeddings not returned"):
+        a.get_all()
+
+
+class _NoEmbeddingCollection:
+    """Wraps a real collection but strips embeddings from get() — simulates a Chroma
+    version/call that doesn't return them, exercising the get_all() guard."""
+
+    def __init__(self, inner):
+        self._inner = inner
+
+    def get(self, *args, **kwargs):
+        got = dict(self._inner.get(*args, **kwargs))
+        got["embeddings"] = None
+        return got

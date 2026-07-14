@@ -50,6 +50,32 @@ class ChromaAdapter(VectorStoreAdapter):
         return [self._to_sample(i, v, d, m) for i, v, d, m in
                 zip(got["ids"], got["embeddings"], got["documents"], got["metadatas"])]
 
+    def get_all(self) -> list[Sample]:
+        """Every stored Sample WITH its embedding, metadata (type + key_entities), and text.
+
+        The robust "load the whole store" primitive: one get() with embeddings included, no
+        fragile ids round-trip. Guards against a store that hands back no embeddings (Chroma
+        won't include them unless asked) rather than silently yielding empty vectors — that
+        silent path is what collapses a full store into a degenerate 0-vector array.
+        """
+        got = self._col.get(include=["embeddings", "metadatas", "documents"])
+        ids = got["ids"]
+        embs = got.get("embeddings")
+        # `is None` / len(), never `if embs:` — Chroma may return a numpy array (ambiguous truth)
+        if embs is None or len(embs) != len(ids):
+            raise RuntimeError(
+                "embeddings not returned — pass include=['embeddings'] "
+                f"(got {0 if embs is None else len(embs)} embeddings for {len(ids)} ids)")
+        docs = got.get("documents") or [None] * len(ids)
+        metas = got.get("metadatas") or [None] * len(ids)
+        samples = [self._to_sample(i, v, d, m) for i, v, d, m in zip(ids, embs, docs, metas)]
+        for s in samples:
+            if not s.vector:
+                raise RuntimeError(
+                    f"empty embedding for id={s.id} — embeddings not returned "
+                    "by Chroma; pass include=['embeddings']")
+        return samples
+
     @staticmethod
     def _to_sample(id_, vec, doc, meta) -> Sample:
         meta = meta or {}

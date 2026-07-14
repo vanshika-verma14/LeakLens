@@ -80,7 +80,7 @@ def main(argv=None) -> int:
     sigmas = [float(x) for x in args.sigmas.split(",") if x.strip() != ""]
 
     adapter = ChromaAdapter(args.store, args.collection)
-    all_samples = adapter.sample(adapter.count(), seed=args.seed)
+    all_samples = adapter.get_all()          # every stored vector, with a loud guard on empties
     # Full store: utility is always measured against ALL vectors so a target competes with
     # every real neighbor (a tiny subset would trivially retrieve itself → flat 1.0).
     full_base = np.array([s.vector for s in all_samples], dtype=np.float64)
