@@ -103,8 +103,13 @@ def main(argv=None) -> int:
         print(f"sigma={sigma}:")
         # Defend the WHOLE store once; the subset we invert is sliced from this same array.
         full_defended = defenses.gaussian_noise(full_base, sigma, seed=args.seed)
-        # utility: clean queries vs the full defended store (all neighbors compete)
-        utility = retrieval.recall_at_k(full_base, full_defended, full_ids, full_ids, args.k)
+        # utility: clean queries vs the full defended store (all neighbors compete).
+        # recall@1 (strict: nearest must be the target) alongside recall@k — @1 bends
+        # earlier, exposing the utility cost sooner. Set → dedup when args.k == 1.
+        util_ks = sorted({1, args.k})
+        util = {f"utility_recall_at_{kk}":
+                retrieval.recall_at_k(full_base, full_defended, full_ids, full_ids, kk)
+                for kk in util_ks}
         # leakage: invert the subset's rows FROM the same defended array (coherent point)
         subset_defended = full_defended[subset_idx]
         recovered, rec_embs = _invert_all(inv, subset_defended, args.num_steps, args.batch_size)
@@ -114,8 +119,10 @@ def main(argv=None) -> int:
         overall = sum(s.recall for s in scores) / len(scores)
         per_cat = metrics.per_category_recall(scores)
         results.append({"sigma": sigma, "leakage_recall": overall,
-                        "leakage_per_category": per_cat, f"utility_recall_at_{args.k}": utility})
-        print(f"  leakage(overall)={overall:.3f}  utility@{args.k}={utility:.3f}\n")
+                        "leakage_per_category": per_cat, **util})
+        print(f"  leakage(overall)={overall:.3f}  " +
+              "  ".join(f"utility@{kk}={util[f'utility_recall_at_{kk}']:.3f}"
+                        for kk in util_ks) + "\n")
 
     print("=" * 78)
     print(f"{'sigma':>7s} {'leakage':>8s} {f'utility@{args.k}':>10s}   per-category leakage")

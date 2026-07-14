@@ -14,3 +14,6 @@ faiss-cpu  # installed in a later slice
 # Config + tooling
 pyyaml==6.0.3
 pytest
+
+# Plotting / study (T2.4 tradeoff curve; CPU-only, no model)
+matplotlib==3.11.0
