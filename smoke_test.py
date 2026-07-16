@@ -44,5 +44,5 @@ for secret in test_sentences:
     recovered = vec2text.invert_embeddings(embeddings=emb, corrector=corrector, num_steps=20)
     print(f"RECOVERED: {recovered[0]}")
     print(f"Took {time.time()-t:.0f}s.")
-
+ 
 print("\nAll sentences done. Compare ORIGINAL vs RECOVERED above for each.")
