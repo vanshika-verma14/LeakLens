@@ -5,7 +5,7 @@ _res.getrlimit = lambda *a, **k: (0, 0)
 _res.setrlimit = lambda *a, **k: None
 _res.RLIMIT_AS = _res.RLIMIT_DATA = _res.RLIM_INFINITY = 0
 sys.modules["resource"] = _res
-
+ 
 import time, torch, vec2text, transformers
 from sentence_transformers import SentenceTransformer
 
