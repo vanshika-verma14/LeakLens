@@ -5,9 +5,9 @@
 ---
 
 ## Current status
-- **Phase:** Slice 3 (tool wrapper) started — T3.1 done. Slice 2 pipeline COMPLETE (T2.1–T2.4); still awaiting the real `--full`/num_steps=20 run for the citable numbers + the written finding (T2.5).
-- **Last done:** T3.1 — `leaklens/finding.py` (`Finding` + `Verdict`/`Severity`, verbatim ARCHITECTURE contract) + `tests/test_finding.py` (5 tests: defaults, independent mutable defaults, enum sets, JSON round-trip via str-mixin). Full suite 54 passed / 1 skipped (slow).
-- **Next action:** T3.2 `config.py` + `config.example.yaml` + ownership gate + test. In parallel track: run the real `--full --num-steps 20` sweep (Colab), re-render the plot, write T2.5, re-confirm the 0.6 leak threshold (D9).
+- **Phase:** Slice 3 (tool wrapper) — T3.1 + T3.2 done. Slice 2 pipeline COMPLETE (T2.1–T2.4); still awaiting the real `--full`/num_steps=20 run for the citable numbers + the written finding (T2.5).
+- **Last done:** T3.2 — `leaklens/config.py` + `config.example.yaml` (load/validate + SR-1 ownership gate + no-silent-threshold rule) + `tests/test_config.py` (11 tests). Full suite 65 passed / 1 skipped (slow).
+- **Next action:** T3.3 `modules/base.py` + `modules/inversion.py` (+ honest-failure path → INCONCLUSIVE) + test. In parallel track: run the real `--full --num-steps 20` sweep (Colab), re-render the plot, write T2.5, re-confirm the 0.6 leak threshold (D9).
 
 ---
 
@@ -48,7 +48,7 @@
 
 ## Slice 3 — Tool wrapper (Phase 3)
 - [x] T3.1 `leaklens/finding.py` — `Finding` dataclass + `Verdict`/`Severity` str-enums, verbatim from ARCHITECTURE; no serialization method needed (str-mixin ⇒ `json.dumps(asdict(f))` just works — guarded by test; a `to_dict` helper, if ever wanted, is T3.4's call). `tests/test_finding.py` (5): defaults, independent mutable defaults, exact enum member sets + str-mixin equality, JSON round-trip (enums serialize as plain strings).
-- [ ] T3.2 `config.py` + `config.example.yaml` + ownership gate + test
+- [x] T3.2 `leaklens/config.py` (`load_config` → `Config` dataclasses mirroring the ARCHITECTURE schema; `ConfigError` with actionable messages) + `config.example.yaml`. **Ownership gate at config level:** any enabled module ⇒ `options.i_own_this_target` must be exactly `True`, else refuse (SR-1; every module samples/probes the target). **Recovery threshold never silent:** inversion enabled ⇒ `recovery_threshold` required, no default (CLAUDE Tier 1). `tests/test_config.py` (11): defaults, gate blocks on false/missing, threshold-not-defaulted, unknown module/store-type, empty modules, missing/empty file, semantic_cache parsed, shipped example validates.
 - [ ] T3.3 `modules/base.py` + `modules/inversion.py` (+ honest-failure) + test
 - [ ] T3.4 `report/owasp.py` + `scorecard.py` + `json_report.py` + `html_report.py`
 - [ ] T3.5 `runner.py` (isolation) + `cli.py` + `__main__.py` + test

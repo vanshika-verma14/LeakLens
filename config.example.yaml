@@ -1,0 +1,31 @@
+# LeakLens example config — copy to config.yaml and edit for your own target.
+# Run: python -m leaklens scan --config config.yaml
+
+target:
+  vector_store:
+    type: chroma                 # chroma | faiss
+    path: ./results/corpus_store # directory of your store
+    collection: docs
+    encoder: sentence-transformers/gtr-t5-base   # the store's embedding model
+
+  # Optional — Surface 2 (semantic-cache poisoning), built in a later slice.
+  # semantic_cache:
+  #   type: gptcache
+  #   similarity_threshold: 0.8
+
+modules:                         # which surfaces to audit
+  - inversion
+  # - cache_poison
+
+inversion:
+  sample_size: 100
+  num_steps: 20                  # vec2text correction steps (fewer = faster/rougher)
+  recovery_threshold: 0.7        # A DOCUMENTED HUMAN DECISION — never defaulted silently.
+                                 # Provisional leak line is recall >= 0.6 (DECISIONS D9);
+                                 # set the value you can defend and record why.
+
+options:
+  i_own_this_target: true        # SR-1 ownership gate — REQUIRED. LeakLens only audits
+                                 # infrastructure you own; every module samples/probes it.
+  output_dir: ./results
+  seed: 42                       # reproducibility (NFR-3) — threaded everywhere
