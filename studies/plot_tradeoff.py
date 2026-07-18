@@ -133,7 +133,7 @@ def main(argv=None) -> int:
     caption = (
         f"PREVIEW — num_steps={data.get('num_steps', '?')}, "
         f"n={data.get('rows', '?')} leakage rows, utility over N={store_n} store · "
-        f"seed {data.get('seed', '?')}.  "
+        f"{len(results)} σ points · seed {data.get('seed', '?')}.  "
         f"Not final: regenerate from the --full run (num_steps=20) before citing.")
     ax.text(0.5, 1.015, caption, transform=ax.transAxes, ha="center", va="bottom",
             fontsize=7.5, color="gray", style="italic")
