@@ -5,9 +5,9 @@
 ---
 
 ## Current status
-- **Phase:** Slice 2 pipeline COMPLETE (T2.1–T2.4). Tradeoff study measures leakage vs utility across a σ grid and renders the curve; awaiting the real `--full`/num_steps=20 run for the citable numbers + the written finding (T2.5).
-- **Last done:** made the sweep resumable for Colab disconnects — per-σ atomic checkpoint of `sweep.json` (always valid/plottable, even if a later σ crashes), re-run with same `--out` skips done σ's (chunk long runs via `--sigmas`), metadata-mismatch guard, per-σ elapsed + ETA prints, model load skipped on no-op resume; plot_tradeoff renders partial JSONs (σ-point count in caption). 5 tests in `tests/test_defense_sweep.py` incl. chunked-resume ≡ single-run byte-identical JSON. Verified end-to-end on the real store (2-σ run, then resume added σ=0.3, partial plot rendered).
-- **Next action:** run the real `--full --num-steps 20` sweep (Colab), re-render the plot, then write T2.5 (one-paragraph finding). Re-confirm the 0.6 leak threshold (D9) against that full run when convenient. Then Slice 3 (tool wrapper).
+- **Phase:** Slice 3 (tool wrapper) started — T3.1 done. Slice 2 pipeline COMPLETE (T2.1–T2.4); still awaiting the real `--full`/num_steps=20 run for the citable numbers + the written finding (T2.5).
+- **Last done:** T3.1 — `leaklens/finding.py` (`Finding` + `Verdict`/`Severity`, verbatim ARCHITECTURE contract) + `tests/test_finding.py` (5 tests: defaults, independent mutable defaults, enum sets, JSON round-trip via str-mixin). Full suite 54 passed / 1 skipped (slow).
+- **Next action:** T3.2 `config.py` + `config.example.yaml` + ownership gate + test. In parallel track: run the real `--full --num-steps 20` sweep (Colab), re-render the plot, write T2.5, re-confirm the 0.6 leak threshold (D9).
 
 ---
 
@@ -47,7 +47,7 @@
 - **DoD:** tradeoff curve saved; crossover (or its absence) stated honestly. ← pipeline + plot done; awaiting real `--full`/num_steps=20 run for citable numbers + T2.5.
 
 ## Slice 3 — Tool wrapper (Phase 3)
-- [ ] T3.1 `finding.py` + test
+- [x] T3.1 `leaklens/finding.py` — `Finding` dataclass + `Verdict`/`Severity` str-enums, verbatim from ARCHITECTURE; no serialization method needed (str-mixin ⇒ `json.dumps(asdict(f))` just works — guarded by test; a `to_dict` helper, if ever wanted, is T3.4's call). `tests/test_finding.py` (5): defaults, independent mutable defaults, exact enum member sets + str-mixin equality, JSON round-trip (enums serialize as plain strings).
 - [ ] T3.2 `config.py` + `config.example.yaml` + ownership gate + test
 - [ ] T3.3 `modules/base.py` + `modules/inversion.py` (+ honest-failure) + test
 - [ ] T3.4 `report/owasp.py` + `scorecard.py` + `json_report.py` + `html_report.py`
