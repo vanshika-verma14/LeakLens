@@ -14,8 +14,10 @@ import numpy as np
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "studies"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 import defense_sweep  # noqa: E402
+import merge_sweeps  # noqa: E402
 import plot_tradeoff  # noqa: E402
 
 from leaklens.adapters.base import Sample  # noqa: E402
@@ -121,6 +123,44 @@ def test_mismatched_config_is_refused(store_dir, tmp_path, monkeypatch):
     # resuming under a different num_steps would mix incomparable points -> refuse
     assert run_sweep(store_dir, out, "0,0.1,0.2", num_steps=2) == 2
     assert out.read_text(encoding="utf-8") == before
+
+
+def test_merge_chunks_equals_single_full_run(store_dir, tmp_path, monkeypatch):
+    """Chunks run into SEPARATE --out files (resume can't see across files) merge
+    back to the byte-identical JSON of one uninterrupted run; the overlapping
+    sigma (0.1, deterministic -> identical in both chunks) dedupes silently."""
+    monkeypatch.setattr(defense_sweep, "get_inverter", lambda: FakeInverter())
+    single = tmp_path / "single.json"
+    chunk_a, chunk_b = tmp_path / "chunk_a.json", tmp_path / "chunk_b.json"
+    assert run_sweep(store_dir, single, "0,0.1,0.2") == 0
+    assert run_sweep(store_dir, chunk_a, "0,0.1") == 0
+    assert run_sweep(store_dir, chunk_b, "0.1,0.2") == 0
+
+    merged = tmp_path / "merged.json"
+    assert merge_sweeps.main([str(chunk_a), str(chunk_b), "--out", str(merged)]) == 0
+    assert merged.read_text(encoding="utf-8") == single.read_text(encoding="utf-8")
+
+
+def test_merge_refuses_mismatched_config(store_dir, tmp_path, monkeypatch):
+    monkeypatch.setattr(defense_sweep, "get_inverter", lambda: FakeInverter())
+    chunk_a, chunk_b = tmp_path / "a.json", tmp_path / "b.json"
+    assert run_sweep(store_dir, chunk_a, "0", num_steps=1) == 0
+    assert run_sweep(store_dir, chunk_b, "0.1", num_steps=2) == 0
+    out = tmp_path / "merged.json"
+    assert merge_sweeps.main([str(chunk_a), str(chunk_b), "--out", str(out)]) == 2
+    assert not out.exists()
+
+
+def test_merge_refuses_conflicting_duplicate_sigma(store_dir, tmp_path, monkeypatch):
+    monkeypatch.setattr(defense_sweep, "get_inverter", lambda: FakeInverter())
+    chunk_a, chunk_b = tmp_path / "a.json", tmp_path / "b.json"
+    assert run_sweep(store_dir, chunk_a, "0,0.1") == 0
+    doc = json.loads(chunk_a.read_text(encoding="utf-8"))
+    doc["results"][1]["leakage_recall"] = 0.123          # same sigma, different value
+    chunk_b.write_text(json.dumps(doc), encoding="utf-8")
+    out = tmp_path / "merged.json"
+    assert merge_sweeps.main([str(chunk_a), str(chunk_b), "--out", str(out)]) == 2
+    assert not out.exists()
 
 
 def test_plot_renders_partial_sweep(store_dir, tmp_path, monkeypatch):
