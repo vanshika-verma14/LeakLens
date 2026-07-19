@@ -12,8 +12,10 @@ dist/
 .pytest_cache/
 .mypy_cache/
 
-# Generated outputs
-results/
+# Generated outputs (ignore contents, but keep the committed validation matrix).
+# Must exclude results/* not results/ — git can't re-include a file whose parent dir is excluded.
+results/*
+!results/validation_matrix.md
 
 # Vector stores / local DBs
 *.sqlite3
