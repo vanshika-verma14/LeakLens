@@ -10,7 +10,7 @@ from leaklens.adapters.base import Sample
 from leaklens.config import Config, InversionConfig, Options, VectorStoreConfig
 from leaklens.finding import Severity, Verdict
 from leaklens.inversion.inverter import ENCODER
-from leaklens.modules.inversion import InversionModule
+from leaklens.modules.inversion import InversionModule, _truncate
 
 SAMPLES = [
     Sample(id="plain-001", vector=[0.1, 0.2, 0.3, 0.4], type="plain",
@@ -125,6 +125,24 @@ def test_empty_store_returns_inconclusive():
     f = module.run(FakeAdapter([]), make_cfg())
     assert f.verdict is Verdict.INCONCLUSIVE
     assert "no vectors" in f.summary
+
+
+def test_truncate_keeps_multibyte_chars_intact():
+    # A recovered string can contain real multibyte chars (accents, CJK, emoji). Truncation
+    # must not split one into a replacement char, and the marker must be ASCII.
+    s = "café résumé 日本語 " + "字" * 60  # comfortably longer than the clip width
+    out = _truncate(s, 20)
+
+    assert "�" not in out                 # no replacement char introduced
+    assert out.endswith("...")                 # ASCII marker, not the U+2026 ellipsis
+    assert "…" not in out
+    assert s.startswith(out[:-3])              # body is an exact prefix — no split char
+    out.encode("utf-8")                        # round-trips cleanly
+
+
+def test_truncate_leaves_short_multibyte_string_unchanged():
+    s = "café 日本語 ☕"
+    assert _truncate(s, 80) == s
 
 
 def test_module_isolates_adapter_errors():

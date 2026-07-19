@@ -44,9 +44,20 @@ def _severity_for(score: float, verdict: Verdict) -> Severity:
     return Severity.LOW
 
 
+_ELLIPSIS = "..."
+
+
 def _truncate(s: str, n: int = 80) -> str:
+    """Clip a preview string to <= n chars, cutting on a character boundary.
+
+    Python str slicing is codepoint-safe, so it never splits a multibyte character. The
+    marker is ASCII on purpose: a non-ASCII ellipsis renders as a replacement char in the
+    cp1252 console (learnings 2026-07-16), which is what showed up as garbage in previews.
+    """
     s = (s or "").replace("\n", " ")
-    return s if len(s) <= n else s[: n - 1] + "…"
+    if len(s) <= n:
+        return s
+    return s[: n - len(_ELLIPSIS)] + _ELLIPSIS
 
 
 class InversionModule(Module):
