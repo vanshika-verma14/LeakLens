@@ -1,0 +1,25 @@
+# Canonical runnable config for `python -m leaklens scan --config config.yaml`.
+# Prerequisite: build the store first with `python scripts/embed_corpus.py`
+# (writes ./results/corpus_store, collection "corpus"). Paths are relative to the
+# repo root. See config.example.yaml for the fully documented template.
+# sample_size is kept small so a full-model run finishes in minutes, not hours.
+
+target:
+  vector_store:
+    type: chroma
+    path: ./results/corpus_store
+    collection: corpus
+    encoder: sentence-transformers/gtr-t5-base
+
+modules:
+  - inversion
+
+inversion:
+  sample_size: 12
+  num_steps: 20
+  recovery_threshold: 0.6        # provisional leak line (DECISIONS D9)
+
+options:
+  i_own_this_target: true
+  output_dir: ./results/scan
+  seed: 42
