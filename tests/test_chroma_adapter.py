@@ -1,5 +1,5 @@
 """Round-trip tests for the Chroma adapter — fast, no model load (hand-made vectors).
-
+ 
 The load-bearing assertion is that id / text / type / key_entities survive the store
 intact, especially key_entities as a *list* (it is JSON-serialized inside Chroma).
 Without that, per-category recovery scoring in T1.4 has no ground truth to key off.
