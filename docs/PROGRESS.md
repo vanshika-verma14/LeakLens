@@ -71,7 +71,7 @@
 - **DoD:** shows deleted-vector recovery, or honestly reports the store hard-deletes.
 
 ## Slice 7 — Polish (Phase 6)
-- [ ] Final `README.md` (leads with infra-layer gap + validation table + demo GIF)
+- [x] T7.1 `README.md` — leads with the infra-layer gap; sections: problem / what it does / install+quickstart (real `embed_corpus.py` → `python -m leaklens scan --config config.yaml`) / Findings / Validation / How it works / Repo layout / Limitations & honest scope / Credits. Numbers grounded in the PROGRESS log (F1 per-category n=240; F4 σ collapse) + DECISIONS; vec2text cited, never presented as novel. **Carries `<!-- TODO -->` markers** for the final full-run figures (sweep_full.json crossover/σ, refreshed tradeoff.png) and the real-inverter validation recall column — drop in when those runs land. Verified: all referenced paths exist, no hype, every number traceable.
 - [ ] `docs/mechanisms.md` (attacks in your own words) ← **your whiteboard defense**
 - [ ] `results/demo.gif`
 - **DoD:** a stranger can read the README, run one command, and get a trustworthy report.
