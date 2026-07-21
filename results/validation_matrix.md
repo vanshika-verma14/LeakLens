@@ -1,4 +1,4 @@
-# LeakLens — Validation Matrix
+# LeakLens — Validation Matrix 
 
 > _(--fake structural run: harness plumbing only, not real recovery numbers.)_
 
